@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM maven:3.8.6-openjdk-11 AS builder
+FROM maven:3.8.6-openjdk-17 AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package
 
 # Stage 2: Run the application
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jre-slim
 
 # Set the working directory
 WORKDIR /app
@@ -20,5 +20,5 @@ WORKDIR /app
 # Copy the packaged WAR file from the builder stage
 COPY --from=builder /app/target/socket-0.0.1-SNAPSHOT.war /app/socket-0.0.1-SNAPSHOT.war
 
-# Specify the command to
+# Specify the command to run the application
 CMD ["java", "-jar", "/app/socket-0.0.1-SNAPSHOT.war"]
