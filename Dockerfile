@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM maven:3.8.6-openjdk-23 AS builder
+FROM maven:3.8.6-openjdk-11 AS builder
 
 # Set the working directory
 WORKDIR /app
@@ -12,7 +12,7 @@ COPY src ./src
 RUN mvn clean package
 
 # Stage 2: Run the application
-FROM openjdk:23-jre-slim
+FROM openjdk:11-jre-slim
 
 # Set the working directory
 WORKDIR /app
