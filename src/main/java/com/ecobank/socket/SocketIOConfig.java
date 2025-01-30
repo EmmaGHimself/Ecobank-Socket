@@ -22,7 +22,7 @@ public class SocketIOConfig {
         // Configure the Socket.IO server
         com.corundumstudio.socketio.Configuration config = new com.corundumstudio.socketio.Configuration();
         config.setHostname("localhost");
-        config.setPort(9092);
+        config.setPort(8080);
 
         // Create the SocketIO server
         SocketIOServer server = new SocketIOServer(config);
