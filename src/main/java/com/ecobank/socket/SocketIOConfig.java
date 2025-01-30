@@ -25,7 +25,7 @@ public class SocketIOConfig {
         config.setPort(9092);
 
         // Allow cross-origin requests
-        config.setOrigin("https://shark-app-l2tqa.ondigitalocean.app/");
+        //config.setOrigin("https://shark-app-l2tqa.ondigitalocean.app/");
 
         // Create the SocketIO server
         SocketIOServer server = new SocketIOServer(config);
