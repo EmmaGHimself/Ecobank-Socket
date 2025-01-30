@@ -21,6 +21,8 @@ WORKDIR /app
 COPY --from=maven_builder /app/target/socket-0.0.1-SNAPSHOT.war /app/socket-0.0.1-SNAPSHOT.war
 
 # Expose the port your application will run on (default for Spring Boot is 8080)
+EXPOSE 8080
+
 EXPOSE 9092
 
 # Specify the command to run the application
