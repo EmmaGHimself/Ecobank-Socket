@@ -21,10 +21,10 @@ public class SocketIOConfig {
     public SocketIOServer socketIOServer() {
         // Configure the Socket.IO server
         com.corundumstudio.socketio.Configuration config = new com.corundumstudio.socketio.Configuration();
-        config.setHostname("shark-app-l2tqa.ondigitalocean.app");
+        config.setHostname("0.0.0.0");
         config.setPort(9092);
 
-        config.setOrigin("https://shark-app-l2tqa.ondigitalocean.app");
+        config.setOrigin("*");
 
 
         // Create the SocketIO server
